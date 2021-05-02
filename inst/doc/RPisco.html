@@ -257,71 +257,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Extraction of monthly PISCO data - Extracción de datos mensuales de PISCO.</strong></li>
 </ul>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>PISCO.file <span class="ot">&lt;-</span> <span class="st">&quot;D:</span><span class="sc">\\</span><span class="st">PISCOm_pp_2.1.nc&quot;</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>monthly.data <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>monthly.matrix <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(<span class="cn">NA</span>, <span class="dv">432</span>, <span class="fu">nrow</span>(Huarpa.stations)))</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(Huarpa.stations)) {</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  monthly.data[[i]] <span class="ot">&lt;-</span> <span class="fu">piscom</span>(<span class="fu">data.frame</span>(PISCO.file, Huarpa.stations<span class="sc">$</span>Lon[i], Huarpa.stations<span class="sc">$</span>Lat[i]))</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  monthly.matrix[,i] <span class="ot">&lt;-</span> monthly.data[[i]]<span class="sc">$</span>values</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(monthly.matrix) <span class="ot">&lt;-</span> Huarpa.stations<span class="sc">$</span>Estacion</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(monthly.matrix)</span></code></pre></div>
-<pre><code>##   San Miguel Hacienda Cochas La Quinua Wayllapampa Huamanga Allpachaca   Huanta
-## 1     58.546        74.77754    93.016     117.489  103.281      67.24  97.8049
-## 2     67.394        78.87476   142.990     241.885  203.901     183.31 198.7527
-## 3     53.661        70.89542    55.871      67.158   53.117      40.28  58.9350
-## 4     16.630        14.74391    17.290      20.516   19.115      15.99  18.4107
-## 5      3.618         2.32993     3.831       3.848    1.745       1.27   4.1418
-## 6      1.810         1.73947     3.270       3.174    4.426       1.58   2.1550
-##   Huanta gore San Pedro Acobamba Lircay Hacienda Tocaz Paucarbamba Lauricocha
-## 1     97.8049   131.344 207.5014 179.06        239.649     239.649   110.3321
-## 2    198.7527   293.978 291.3410 271.49        158.848     158.848   104.7010
-## 3     58.9350    83.373 177.2633 127.10        286.794     286.794   100.6469
-## 4     18.4107    34.350  61.5669  51.79         47.106      47.106    12.8063
-## 5      4.1418     2.749  12.9826   6.97         18.354      18.354     7.4067
-## 6      2.1550     3.423   4.5664   8.77          9.073       9.073     2.0933
-##   Huancavelica  Paras Chuschi Libertadores 706 Libertadores 156139 Choclococha
-## 1       159.00 125.31 105.034         158.5603            135.3740     204.017
-## 2       295.39 282.14 222.138         267.1623            279.4420     333.169
-## 3       196.82  57.97  58.077         115.8359             98.3402     158.016
-## 4        67.84 147.80  63.941          90.3171             92.2410      67.726
-## 5         3.91   1.09   1.119           0.7820              1.1291       0.394
-## 6        11.15   1.07   0.527           0.2101              0.1848       0.501
-##   Acnococha Tunel cero
-## 1  127.0728   127.0728
-## 2  220.6691   220.6691
-## 3   81.1310    81.1310
-## 4   62.1846    62.1846
-## 5    0.5611     0.5611
-## 6    0.3210     0.3210</code></pre>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>monthly.data <span class="ot">&lt;-</span> <span class="fu">piscomgroup</span>(<span class="fu">data.frame</span>(PISCO.file, Huarpa.stations))</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(monthly.data)</span></code></pre></div>
+<pre><code>##         date San Miguel Hacienda Cochas La Quinua Wayllapampa  Huamanga
+## 1 1981-01-01   58.54567        74.77754  93.01641   117.48862 103.28103
+## 2 1981-02-01   67.39442        78.87476 142.98962   241.88490 203.90121
+## 3 1981-03-01   53.66131        70.89542  55.87140    67.15765  53.11654
+## 4 1981-04-01   16.62957        14.74391  17.29029    20.51554  19.11527
+## 5 1981-05-01    3.61790         2.32993   3.83066     3.84793   1.74525
+## 6 1981-06-01    1.80981         1.73947   3.27024     3.17444   4.42622
+##   Allpachaca    Huanta Huanta gore San Pedro  Acobamba    Lircay Hacienda Tocaz
+## 1   67.24044  97.80492    97.80492 131.34431 207.50142 179.05977      239.64926
+## 2  183.31203 198.75272   198.75272 293.97815 291.34100 271.49072      158.84775
+## 3   40.27865  58.93501    58.93501  83.37255 177.26332 127.10260      286.79398
+## 4   15.99107  18.41072    18.41072  34.34954  61.56691  51.79061       47.10588
+## 5    1.26738   4.14175     4.14175   2.74853  12.98256   6.97344       18.35392
+## 6    1.58454   2.15502     2.15502   3.42321   4.56641   8.77444        9.07320
+##   Paucarbamba Lauricocha Huancavelica     Paras   Chuschi Libertadores 706
+## 1   239.64926  110.33208    159.00160 125.30540 105.03394        158.56030
+## 2   158.84775  104.70095    295.38922 282.13904 222.13841        267.16232
+## 3   286.79398  100.64695    196.82372  57.97153  58.07713        115.83591
+## 4    47.10588   12.80632     67.83571 147.80380  63.94131         90.31709
+## 5    18.35392    7.40672      3.90998   1.08554   1.11921          0.78201
+## 6     9.07320    2.09332     11.15154   1.07318   0.52701          0.21010
+##   Libertadores 156139 Choclococha Acnococha Tunel cero
+## 1           135.37398   204.01686 127.07281  127.07281
+## 2           279.44202   333.16922 220.66913  220.66913
+## 3            98.34023   158.01579  81.13100   81.13100
+## 4            92.24104    67.72575  62.18458   62.18458
+## 5             1.12915     0.39376   0.56113    0.56113
+## 6             0.18477     0.50078   0.32104    0.32104</code></pre>
 <ul>
 <li><strong>Monthly average of San Miguel station - Promedio mensual de la estación San Miguel</strong></li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>ini.yr <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">&quot;1981-01-01&quot;</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>end.yr <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">&quot;2016-12-01&quot;</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>date <span class="ot">&lt;-</span> <span class="fu">seq</span>(ini.yr, end.yr, <span class="at">by =</span> <span class="st">&quot;months&quot;</span>)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>monthly.matrix <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(date, monthly.matrix)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">monthlyavg</span>(<span class="fu">data.frame</span>(monthly.matrix<span class="sc">$</span>date, monthly.matrix[,<span class="dv">2</span>]))</span></code></pre></div>
-<pre><code>##       Jan    Feb      Mar      Apr    May   Jun      Jul      Aug      Sep
-## 1 54.9405 49.308 53.42675 23.35742 8.4465 2.746 2.196361 3.838528 11.91889
-##        Oct      Nov      Dec
-## 1 22.48619 31.13453 77.18333</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">monthlyavg</span>(<span class="fu">data.frame</span>(monthly.data<span class="sc">$</span>date, monthly.data[,<span class="dv">2</span>]))</span></code></pre></div>
+<pre><code>##        Jan      Feb      Mar      Apr      May      Jun      Jul      Aug
+## 1 54.94048 49.30801 53.42671 23.35738 8.446521 2.745969 2.196354 3.838493
+##        Sep      Oct      Nov      Dec
+## 1 11.91895 22.48625 31.13459 77.18325</code></pre>
 <ul>
 <li><strong>Yearly average of San Miguel station - Promedio anual de la estación San Miguel</strong></li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">yearlyavg</span>(<span class="fu">data.frame</span>(monthly.matrix<span class="sc">$</span>date, monthly.matrix[,<span class="dv">2</span>]))</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">yearlyavg</span>(<span class="fu">data.frame</span>(monthly.data<span class="sc">$</span>date, monthly.data[,<span class="dv">2</span>]))</span></code></pre></div>
 <pre><code>## [1] 340.983</code></pre>
 <ul>
 <li><strong>Annual serie of San Miguel station - serie anual de la estación San Miguel</strong></li>
 </ul>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">pisco2annual</span>(<span class="fu">data.frame</span>(monthly.matrix<span class="sc">$</span>date, monthly.matrix[,<span class="dv">2</span>])))</span></code></pre></div>
-<pre><code>##   date  values
-## 1 1981 369.028
-## 2 1982 315.348
-## 3 1983 271.127
-## 4 1984 234.062
-## 5 1985 342.935
-## 6 1986 370.935</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">pisco2annual</span>(<span class="fu">data.frame</span>(monthly.matrix<span class="sc">$</span>date, monthly.data[,<span class="dv">2</span>])))</span></code></pre></div>
+<pre><code>## Error in data.frame(monthly.matrix$date, monthly.data[, 2]): objeto &#39;monthly.matrix&#39; no encontrado</code></pre>
 <p><strong>6. References - Referencias</strong></p>
 <p>Aybar. (2017). Uso del producto grillado PISCO de precipitación en estudios, investigaciones sistemas operacionales de monitoreo y pronóstico hidrometeorológico. Lima: SENAMHI.</p>
 </div>
