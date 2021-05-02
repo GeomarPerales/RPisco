@@ -14,7 +14,7 @@ From Github:
 
 ## 3. Contents
 
-RPisco contains tools for extracting daily and monthly data from PISCO.
+RPisco contains multiple tools for manipulate data from PISCO.
 
 ## 4. Data
 
