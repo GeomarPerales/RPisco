@@ -123,7 +123,7 @@ yearlyavg(data.frame(monthly.data$date, monthly.data[,2]))
 ```
 - **Annual serie of San Miguel station - serie anual de la estación San Miguel**
 ```{r}
-head(pisco2annual(data.frame(monthly.matrix$date, monthly.data[,2])))
+head(pisco2annual(data.frame(monthly.data$date, monthly.data[,2])))
 ```
 
 **6. References - Referencias**

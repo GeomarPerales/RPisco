@@ -303,8 +303,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><strong>Annual serie of San Miguel station - serie anual de la estación San Miguel</strong></li>
 </ul>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">pisco2annual</span>(<span class="fu">data.frame</span>(monthly.matrix<span class="sc">$</span>date, monthly.data[,<span class="dv">2</span>])))</span></code></pre></div>
-<pre><code>## Error in data.frame(monthly.matrix$date, monthly.data[, 2]): objeto &#39;monthly.matrix&#39; no encontrado</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">pisco2annual</span>(<span class="fu">data.frame</span>(monthly.data<span class="sc">$</span>date, monthly.data[,<span class="dv">2</span>])))</span></code></pre></div>
+<pre><code>##   date   values
+## 1 1981 369.0274
+## 2 1982 315.3467
+## 3 1983 271.1277
+## 4 1984 234.0625
+## 5 1985 342.9361
+## 6 1986 370.9350</code></pre>
 <p><strong>6. References - Referencias</strong></p>
 <p>Aybar. (2017). Uso del producto grillado PISCO de precipitación en estudios, investigaciones sistemas operacionales de monitoreo y pronóstico hidrometeorológico. Lima: SENAMHI.</p>
 </div>

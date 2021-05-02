@@ -55,5 +55,5 @@ monthlyavg(data.frame(monthly.data$date, monthly.data[,2]))
 yearlyavg(data.frame(monthly.data$date, monthly.data[,2]))
 
 ## -----------------------------------------------------------------------------
-head(pisco2annual(data.frame(monthly.matrix$date, monthly.data[,2])))
+head(pisco2annual(data.frame(monthly.data$date, monthly.data[,2])))
 
