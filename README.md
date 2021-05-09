@@ -19,3 +19,12 @@ RPisco contains multiple tools for manipulate data from PISCO.
 ## 4. Data
 
 RPisco contain precipitation and stations dataset of Huarpa basin, located between Ayacucho and Huancavelica regions in Peru.
+
+## 5. Credits - Créditos
+
+RPisco fue desarrollado por Geomar Perales. Para alguna duda o sugerencia: perales.geomar@gmail.com
+
+## 6. How to cite? - Como citar?
+
+
+## 7. References - Referencias
