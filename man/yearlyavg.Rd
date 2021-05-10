@@ -4,14 +4,15 @@
 \alias{yearlyavg}
 \title{function for processing of pisco daily/monthly values to a yearly average.}
 \usage{
-yearlyavg(x, variable = NULL)
+yearlyavg(x, param = NULL)
 }
 \arguments{
 \item{x}{a dataframe with PISCO daily/monthly values.}
 
-\item{variable}{OPTIONAL, default value is sum for precipitation, use mean for temperature.}
+\item{param}{OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
+use mean for temperature.}
 }
 \description{
-function for processing of pisco daily/monthly values to a yearly average, apply to precipitation and
-temperature.
+function for processing of pisco daily/monthly values to a yearly average, apply to precipitation,
+temperature and evapotranspiration.
 }

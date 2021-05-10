@@ -2,7 +2,7 @@
 % Please edit documentation in R/piscodgroup.R
 \name{piscodgroup}
 \alias{piscodgroup}
-\title{values extraction of PISCO daily precipitation from a stations group.}
+\title{values extraction of PISCO daily data from a stations group.}
 \usage{
 piscodgroup(x, start = NULL, end = NULL)
 }
@@ -14,5 +14,5 @@ piscodgroup(x, start = NULL, end = NULL)
 \item{end}{OPTIONAL, end date of dataset, default value is 2016-12-31.}
 }
 \description{
-function for extract values of PISCO daily precipitation from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+function for extract values of PISCO daily data from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }

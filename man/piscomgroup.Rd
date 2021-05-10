@@ -2,7 +2,7 @@
 % Please edit documentation in R/piscomgroup.R
 \name{piscomgroup}
 \alias{piscomgroup}
-\title{values extraction of PISCO monthly precipitation from a stations group}
+\title{values extraction of PISCO monthly data from a stations group}
 \usage{
 piscomgroup(x, start = NULL, end = NULL)
 }
@@ -14,5 +14,5 @@ piscomgroup(x, start = NULL, end = NULL)
 \item{end}{OPTIONAL, end date of dataset, default value is 2016-12-01.}
 }
 \description{
-function for extract values of PISCO monthly precipitation from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+function for extract values of PISCO monthly data from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }

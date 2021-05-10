@@ -2,7 +2,7 @@
 % Please edit documentation in R/piscod.R
 \name{piscod}
 \alias{piscod}
-\title{values extraction of PISCO daily precipitation}
+\title{values extraction of PISCO daily data}
 \usage{
 piscod(x, start = NULL, end = NULL)
 }
@@ -14,5 +14,5 @@ piscod(x, start = NULL, end = NULL)
 \item{end}{OPTIONAL, end date of dataset, default value is 2016-12-31.}
 }
 \description{
-function for extract values of PISCO daily precipitation, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+function for extract values of PISCO daily data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }

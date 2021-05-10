@@ -2,7 +2,7 @@
 % Please edit documentation in R/piscom.R
 \name{piscom}
 \alias{piscom}
-\title{values extraction of PISCO monthly precipitation}
+\title{values extraction of PISCO monthly data}
 \usage{
 piscom(x, start = NULL, end = NULL)
 }
@@ -14,5 +14,5 @@ piscom(x, start = NULL, end = NULL)
 \item{end}{OPTIONAL, end date of dataset, default value is 2016-12-01.}
 }
 \description{
-function for extract values of PISCO monthly precipitation, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+function for extract values of PISCO monthly data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }
