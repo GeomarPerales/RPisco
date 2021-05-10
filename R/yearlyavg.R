@@ -1,15 +1,16 @@
 #' function for processing of pisco daily/monthly values to a yearly average.
 #'
-#' function for processing of pisco daily/monthly values to a yearly average, apply to precipitation and
-#' temperature.
+#' function for processing of pisco daily/monthly values to a yearly average, apply to precipitation,
+#' temperature and evapotranspiration.
 #' @param x a dataframe with PISCO daily/monthly values.
-#' @param variable OPTIONAL, default value is sum for precipitation, use mean for temperature.
+#' @param param OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
+#' use mean for temperature.
 #' @export
 #' @name yearlyavg
 
 yearlyavg <-function(x, ...) UseMethod("yearlyavg")
 
-yearlyavg <- function(x, variable = NULL){
+yearlyavg <- function(x, param = NULL){
 
   colnames(x) <- c("date", "values")
 
@@ -17,16 +18,16 @@ yearlyavg <- function(x, variable = NULL){
     stop("values not recognized")
   }
 
-  if(is.null(variable)){
+  if(is.null(param)){
     opt = sum
 
-  } else if(variable == "precipitation"){
+  } else if(param == "sum"){
     opt = sum
 
-  } else if(variable == "temperature"){
+  } else if(param == "mean"){
     opt = mean
   } else {
-    stop("variable not recognized")
+    stop("parameter not recognized")
   }
 
   annual = strftime(x$date, "%Y")

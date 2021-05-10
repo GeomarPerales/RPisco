@@ -1,15 +1,16 @@
 #' function for processing of pisco daily values to a monthly average.
 #'
-#' function for processing of pisco daily values to a monthly average, apply to precipitation and
-#' temperature.
+#' function for processing of pisco daily values to a monthly average, apply to precipitation,
+#' temperature and evapotranspiration.
 #' @param x a dataframe with PISCO daily values.
-#' @param variable OPTIONAL, default value is sum for precipitation, use mean for temperature.
+#' @param param OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
+#' use mean for temperature.
 #' @export
 #' @name monthlyavg
 
-monthlyavg <-function(x, ...) UseMethod("monthlyavg")
+monthlyavg <-function(x,...) UseMethod("monthlyavg")
 
-monthlyavg <- function(x, variable = NULL){
+monthlyavg <- function(x,param = NULL){
 
   colnames(x) <- c("date", "values")
 
@@ -17,19 +18,18 @@ monthlyavg <- function(x, variable = NULL){
     stop("values not recognized")
   }
 
-  if(is.null(variable)){
+  if(is.null(param)){
     opt = sum
-
-  } else if(variable == "precipitation"){
+  } else if(param == "sum"){
     opt = sum
-  } else if(variable == "temperature"){
+  } else if(param == "mean"){
     opt = mean
   } else {
-    stop("variable not recognized")
+    stop("parameter not recognized")
   }
 
   date = strftime(x$date, "%Y-%m")
-  values.sum = aggregate( as.numeric(as.vector(x$values)), by = list(date), FUN = opt)
+  values.sum = aggregate(as.numeric(as.vector(x$values)),by = list(date),FUN = opt)
   colnames(values.sum) <- c("date","values")
 
   min.yr <- as.numeric(substr(min(x$date),1,4))
