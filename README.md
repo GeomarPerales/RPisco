@@ -6,11 +6,11 @@ PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrol
 
 ## 2. Installation
 
-Paso 1: Install **devtools**:
+Paso 1: Install **devtools**
 ```	
 > install.packages("devtools")
 ```
-Paso 2: From Github:
+Paso 2: From Github
 ```	
 > library(devtools)
 > install_github("GeomarPerales/RPisco")		
