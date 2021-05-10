@@ -36,6 +36,3 @@ Perales, G. 2021. RPisco: Tools for manipulate PISCO data of SENAMHI (Peru). Git
 ## 7. References - Referencias
 
 Aybar. (2017). Uso del producto grillado PISCO de precipitación en estudios, investigaciones sistemas operacionales de monitoreo y pronóstico hidrometeorológico. Lima: SENAMHI.
-
-
-
