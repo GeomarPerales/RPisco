@@ -4,7 +4,8 @@ Title: Tools for manipulate Pisco data of SENAMHI (Peru)
 Version: 0.1.0
 Author: Geomar Perales Apaico
 Maintainer: Geomar Perales Apaico <perales.geomar@gmail.com>
-Description: RPisco package is a library with tools for manipulate PISCO data of SENAMHI (Peru).
+Description: RPisco is a package with tools for manipulate PISCO data of SENAMHI (Peru). PISCO is
+                Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 License: GPL
 Encoding: UTF-8
 LazyData: true
@@ -15,4 +16,4 @@ Depends: R (>= 2.10)
 Suggests: knitr, rmarkdown, ncdf4, testthat (>= 3.0.0)
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-05-10 03:51:25 UTC; LENOVO
+Packaged: 2021-05-16 03:11:45 UTC; LENOVO
