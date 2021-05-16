@@ -2,15 +2,15 @@
 
 ## 1. Overview
 
-PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations. PISCO parameters are: precipitation, maximum temperature and minimum temperature.
+RPisco is a package with tools for manipulate PISCO data of SENAMHI(Peru). PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations. RPisco have functios for values extraction of an and various stations, monthly and annual values sum, monthly and annual values average.
 
 ## 2. Installation
 
-Paso 1: Install **devtools**
+Paso 1: Install **devtools**:
 ```	
 > install.packages("devtools")
 ```
-Paso 2: From Github
+Paso 2: From Github:
 ```	
 > library(devtools)
 > install_github("GeomarPerales/RPisco")		
