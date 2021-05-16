@@ -6,8 +6,8 @@ Author: Geomar Perales Apaico
 Maintainer: Geomar Perales Apaico <perales.geomar@gmail.com>
 Description: RPisco is a package with tools for manipulate PISCO data of SENAMHI(Peru). PISCO
  is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
- RPisco have functios for values extraction of an and various stations, monthly and annual values
- sum, monthly and annual values average.
+ RPisco have functios for values extraction of an and various stations, monthly and annual
+ values sum, monthly and annual values average.
 License: GPL
 Encoding: UTF-8
 LazyData: true
@@ -18,4 +18,4 @@ Depends: R (>= 2.10)
 Suggests: knitr, rmarkdown, ncdf4, testthat (>= 3.0.0)
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-05-16 04:45:59 UTC; LENOVO
+Packaged: 2021-05-16 04:49:06 UTC; LENOVO
