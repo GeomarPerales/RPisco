@@ -16,7 +16,14 @@
 piscom <-function(x, ...) UseMethod("piscom")
 
 piscom <- function(x, start = NULL, end = NULL){
-  colnames(x) <- c("nc", "lon", "lat")
+  x <- x[,1:3]
+  colnames(x) <- c("nc","v1", "v2")
+  if(x$v1[1] < x$v2[1]){
+    colnames(x) <- c("nc","lon", "lat")
+  } else if(x$v1[1] > x$v2[1]){
+    colnames(x) <- c("nc","lat", "lon")
+  }
+
   file.nc <- as.character(x$nc)
   longitude <- as.numeric(x$lon)
   latitude <- as.numeric(x$lat)
