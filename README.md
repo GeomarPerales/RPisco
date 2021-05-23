@@ -1,8 +1,8 @@
-# RPisco : RPisco package is a library with tools for manipulate PISCO data of SENAMHI (Peru).
+# RPisco : RPisco package is a package with tools for manipulate PISCO  data.
 
 ## 1. Overview
 
-RPisco is a package with tools for manipulate PISCO data of SENAMHI(Peru). PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations. RPisco have functios for values extraction of an and various stations, monthly and annual values sum, monthly and annual values average.
+RPisco is a package with tools for manipulate PISCO (SENAMHI, Peru) data. PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations. RPisco have functions for values extraction of an and various stations, monthly and annual values sum, monthly and annual values average.
 
 ## 2. Installation
 
@@ -17,7 +17,7 @@ Paso 2: From Github:
 ```
 ## 3. Contents
 
-RPisco contains multiple tools for manipulate data from PISCO.
+RPisco contains multiple tools for manipulate data from PISCO (SENAMHI, Peru).
 
 ## 4. Data
 
