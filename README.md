@@ -6,11 +6,11 @@ RPisco is a package with tools for manipulate PISCO (SENAMHI, Peru) data. PISCO 
 
 ## 2. Installation
 
-Paso 1: Install **devtools**:
+Step 1: Install devtools:
 ```	
 > install.packages("devtools")
 ```
-Paso 2: From Github:
+Step 2: From Github:
 ```	
 > library(devtools)
 > install_github("GeomarPerales/RPisco")		
