@@ -16,3 +16,6 @@ use mean for temperature.}
 function for processing of pisco daily values to a monthly serie, apply to precipitation,
 temperature and evapotranspiration.
 }
+\author{
+Geomar Perales Apaico
+}

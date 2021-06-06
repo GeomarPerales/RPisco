@@ -16,3 +16,6 @@ piscomgroup(x, start = NULL, end = NULL)
 \description{
 function for extract values of PISCO monthly data from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }
+\author{
+Geomar Perales Apaico
+}
