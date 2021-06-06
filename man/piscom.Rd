@@ -4,15 +4,17 @@
 \alias{piscom}
 \title{values extraction of PISCO monthly data}
 \usage{
-piscom(x, start = NULL, end = NULL)
+piscom(x, obj = NULL)
 }
 \arguments{
 \item{x}{a dataframe with PISCO file name (in netCDF format), longitude and latitude of station.}
 
-\item{start}{OPTIONAL, start date of dataset, default value is 1981-01-01.}
-
-\item{end}{OPTIONAL, end date of dataset, default value is 2016-12-01.}
+\item{obj}{OPTIONAL, default parameter is NULL, use this parameter for obtain data in
+column or matrix. Use col for obtain data column or matrix for obtain data matrix.}
 }
 \description{
 function for extract values of PISCO monthly data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+}
+\author{
+Geomar Perales Apaico
 }
