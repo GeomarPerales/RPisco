@@ -5,11 +5,12 @@
 #' @param x a dataframe with PISCO daily values.
 #' @param param OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
 #' use mean for temperature.
-#'@param obj OPTIONAL, default parameter is NULL, use this parameter for obtain data in
+#' @param obj OPTIONAL, default parameter is NULL, use this parameter for obtain data in
 #'column or matrix. Use col for obtain data column or matrix for obtain data matrix.
+#' @export
+#'
 #' @author Geomar Perales Apaico
 #'
-#' @export
 #' @name pisco2monthly
 
 pisco2monthly <-function(x, ...) UseMethod("pisco2monthly")

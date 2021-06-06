@@ -11,9 +11,10 @@
 #' @import sp
 #' @import raster
 #'
+#' @export
+#'
 #' @author Geomar Perales Apaico
 #'
-#' @export
 #' @name piscodgroup
 
 piscodgroup <-function(x, ...) UseMethod("piscodgroup")

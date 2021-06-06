@@ -11,9 +11,10 @@
 #' @import sp
 #' @import raster
 #'
+#' @export
+#'
 #' @author Geomar Perales Apaico
 #'
-#' @export
 #' @name piscomgroup
 
 piscomgroup <-function(x, ...) UseMethod("piscomgroup")

@@ -2,8 +2,8 @@
 #'
 #' function for extract values of PISCO monthly data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 #' @param x a dataframe with PISCO file name (in netCDF format), longitude and latitude of station.
-#' @param start OPTIONAL, start date of dataset, default value is 1981-01-01.
-#' @param end OPTIONAL, end date of dataset, default value is 2016-12-01.
+#' @param obj OPTIONAL, default parameter is NULL, use this parameter for obtain data in
+#'column or matrix. Use col for obtain data column or matrix for obtain data matrix.
 #' @importFrom raster brick
 #' @importFrom raster projection
 #' @importFrom raster extract
@@ -11,11 +11,14 @@
 #' @import sp
 #' @import raster
 #' @export
+#'
+#' @author Geomar Perales Apaico
+#'
 #' @name piscom
 
 piscom <-function(x, ...) UseMethod("piscom")
 
-piscom <- function(x, start = NULL, end = NULL){
+piscom <- function(x, obj = NULL){
   x <- x[,1:3]
   colnames(x) <- c("nc","v1", "v2")
   if(x$v1[1] < x$v2[1]){
@@ -42,29 +45,28 @@ piscom <- function(x, start = NULL, end = NULL){
   study.range <- data.frame( Date = seq( from = as.Date( "1981-01-01"), to = as.Date( "2016-12-01"), by = "months"))
   Pisco.data <- cbind( study.range, format(as.vector(Pisco.data), scientific = F, digits = 2))
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
-  colnames(Pisco.data) <- c("date", "values")
 
-  if(is.null(start) & is.null(end)){
-    return(Pisco.data)
-  } else if(!is.null(start)  & !is.null(end)){
-    if( sapply( start, function(x) !all(is.na(as.Date(as.character(x),format="%Y-%m-%d")))) == TRUE &
-        sapply( start, function(x) !all(is.na(as.Date(as.character(x),format="%Y-%m-%d")))) == TRUE){
-      start.out <- start
-      end.out <- end
-      Pisco.data <- Pisco.data[(Pisco.data$Months >= start.out & Pisco.data$Months <= end.out),]
-      return(Pisco.data)
-    } else {
-      stop("date format not recognized, date format is %Y-%m-%d ")
-    }
 
-  } else if(!is.null(start) & sapply( start,
-                                      function(x) !all(is.na(as.Date(as.character(x),format="%Y-%m-%d")))) == TRUE){
-    start.out <- start
-    end.out <- "2016-12-01"
-    Pisco.data <- Pisco.data[(Pisco.data$Months >= start.out & Pisco.data$Months <= end.out),]
+  if(is.null(obj)){
+    colnames(Pisco.data) <- c("date", "values")
     return(Pisco.data)
+
+  } else if(obj == "col"){
+    colnames(Pisco.data) <- c("date", "values")
+    return(Pisco.data)
+
+  } else if(obj == "matrix"){
+    Pisco.data <- t(matrix(Pisco.data[,2], 12, 36))
+    Pisco.data <- data.frame(Pisco.data)
+    colnames(Pisco.data) <- month.abb
+    return(Pisco.data)
+
+  } else if(is.na(match(obj, c("col", "matrix")))){
+    stop("obj parameter not recognized")
+
   } else {
-    stop("date format not recognized, date format is %Y-%m-%d ")
+    stop("obj parameter not recognized")
+
   }
 }
 #' @rdname piscom

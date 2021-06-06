@@ -6,9 +6,10 @@
 #' @param param OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
 #' use mean for temperature.
 #'
+#'@export
+#'
 #' @author Geomar Perales Apaico
 #'
-#' @export
 #' @name pisco2annual
 
 pisco2annual <-function(x, ...) UseMethod("pisco2annual")
