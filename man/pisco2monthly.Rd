@@ -4,13 +4,16 @@
 \alias{pisco2monthly}
 \title{function for processing of pisco daily values to a monthly serie.}
 \usage{
-pisco2monthly(x, param = NULL)
+pisco2monthly(x, param = NULL, obj = NULL)
 }
 \arguments{
 \item{x}{a dataframe with PISCO daily values.}
 
 \item{param}{OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
 use mean for temperature.}
+
+\item{obj}{OPTIONAL, default parameter is NULL, use this parameter for obtain data in
+column or matrix. Use col for obtain data column or matrix for obtain data matrix.}
 }
 \description{
 function for processing of pisco daily values to a monthly serie, apply to precipitation,
