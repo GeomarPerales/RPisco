@@ -10,6 +10,9 @@
 #' @importFrom sp coordinates
 #' @import sp
 #' @import raster
+#'
+#' @author Geomar Perales Apaico
+#'
 #' @export
 #' @name piscodgroup
 

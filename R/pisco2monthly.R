@@ -5,6 +5,9 @@
 #' @param x a dataframe with PISCO daily values.
 #' @param param OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
 #' use mean for temperature.
+#'
+#' @author Geomar Perales Apaico
+#'
 #' @export
 #' @name pisco2monthly
 
