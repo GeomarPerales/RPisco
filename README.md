@@ -2,15 +2,15 @@
 
 ## 1. Overview
 
-RPisco is a package with tools for manipulate PISCO (SENAMHI, Peru) data. PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations. RPisco package have functions for values extraction of an and various stations, monthly and annual values sum, monthly and annual values average.
+RPisco is a package with tools for manipulate PISCO (SENAMHI, Peru) data. PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations. RPisco have functions for values extraction of an and various stations, monthly and annual values sum, monthly and annual values average.
 
 ## 2. Installation
 
-Step 1: Install devtools:
+Paso 1: Install **devtools**:
 ```	
 > install.packages("devtools")
 ```
-Step 2: From Github:
+Paso 2: From Github:
 ```	
 > library(devtools)
 > install_github("GeomarPerales/RPisco")		
@@ -29,10 +29,7 @@ RPisco was developed by Geomar Perales. or any issue or suggestion please write 
 
 RPisco fue desarrollado por Geomar Perales. Para alguna duda o sugerencia: perales.geomar@gmail.com
 
-## 6. How to cite? - Como citar?
 
-Perales, G. 2021. RPisco: Tools for manipulate PISCO data of SENAMHI (Peru). GitHub repository: https://github.com/GeomarPerales/RPisco
-
-## 7. References - Referencias
+## 6. References - Referencias
 
 Aybar. (2017). Uso del producto grillado PISCO de precipitación en estudios, investigaciones sistemas operacionales de monitoreo y pronóstico hidrometeorológico. Lima: SENAMHI.
