@@ -7,7 +7,7 @@ Maintainer: Geomar Perales Apaico <perales.geomar@gmail.com>
 Description: RPisco is a package with tools for manipulate PISCO climatic databases (SENAMHI, Peru).
  PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations,
  RPisco have functios for multiple tasks using PISCO climatic databases.
-License: GPL
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
