@@ -24,8 +24,6 @@
 #'
 #' @name piscomgroup
 
-piscomgroup <-function(x, ...) UseMethod("piscomgroup")
-
 piscomgroup <- function(x, start = NULL, end = NULL){
   x <- x[,1:4]
   colnames(x) <- c("nc", "name","v1", "v2")

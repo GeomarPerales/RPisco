@@ -24,8 +24,6 @@
 #'
 #' @name piscom
 
-piscom <-function(x, ...) UseMethod("piscom")
-
 piscom <- function(x, obj = NULL){
   x <- x[,1:3]
   colnames(x) <- c("nc","v1", "v2")

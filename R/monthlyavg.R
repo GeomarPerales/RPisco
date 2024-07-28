@@ -12,8 +12,6 @@
 #'
 #' @name monthlyavg
 
-monthlyavg <-function(x,...) UseMethod("monthlyavg")
-
 monthlyavg <- function(x,param = NULL){
 
   colnames(x) <- c("date", "values")

@@ -13,8 +13,6 @@
 #'
 #' @name pisco2monthly
 
-pisco2monthly <-function(x, ...) UseMethod("pisco2monthly")
-
 pisco2monthly <- function(x, param = NULL, obj = NULL){
 
   colnames(x) <- c("date", "values")

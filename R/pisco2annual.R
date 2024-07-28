@@ -12,8 +12,6 @@
 #'
 #' @name pisco2annual
 
-pisco2annual <-function(x, ...) UseMethod("pisco2annual")
-
 pisco2annual <- function(x, param = NULL){
 
   colnames(x) <- c("date", "values")
