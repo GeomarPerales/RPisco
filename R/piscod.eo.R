@@ -1,7 +1,8 @@
-#' values extraction of PISCO evapotranspiration daily data
+#' values extraction of PISCO evapotranspiration daily climatic databases
 #'
-#' function for extract values of PISCO evapotranspiration daily data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
-#' @param x a dataframe with PISCO files folder (in netCDF format), longitude and latitude of station.
+#' function for extract values of PISCO evapotranspiration daily climatic databases,
+#' PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+#' @param x a dataframe with PISCO files folder (netCDF format) of evapotranspiration, longitude and latitude of station.
 #' @importFrom raster brick
 #' @importFrom raster projection
 #' @importFrom raster extract
@@ -15,8 +16,6 @@
 #' @author Geomar Perales Apaico
 #'
 #' @name piscod.eo
-
-piscod.eo <-function(x, ...) UseMethod("piscod")
 
 piscod.eo <- function(x){
   x <- x[,1:3]
