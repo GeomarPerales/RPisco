@@ -14,7 +14,7 @@
 #'
 #' @examples
 #'
-#' PISCO.file <- "PISCOm_pp_2.1.nc"
+#' PISCO.file <- file.path("D:", "PISCOm_pp_2.0.nc")
 #' latitude <- -76.11
 #' longitude <- -13.11
 #' x <-  data.frame(PISCO.file, latitude, longitude)

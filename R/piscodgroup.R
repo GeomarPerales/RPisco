@@ -15,7 +15,7 @@
 #'
 #'@examples
 #'
-#' PISCO.file <- "PISCOd_pp_2.1.nc"
+#' PISCO.file <- file.path("D:", "PISCOd_pp_2.0.nc")
 #' station <- "Ayacucho"
 #' latitude <- -76.11
 #' longitude <- -13.11
