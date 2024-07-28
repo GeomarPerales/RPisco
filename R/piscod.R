@@ -1,9 +1,9 @@
-#' values extraction of PISCO daily data
+#' values extraction of PISCO daily databases
 #'
 #' function for extract values of PISCO daily data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 #' @param x a dataframe with PISCO file name (in netCDF format), longitude and latitude of station.
-#' @param start OPTIONAL, start date of dataset, default value is 1981-01-01.
-#' @param end OPTIONAL, end date of dataset, default value is 2016-12-31.
+#' @param start OPTIONAL, start date of extraction period, default value is 1981-01-01.
+#' @param end OPTIONAL, end date of extraction period, default value is 2016-12-31.
 #' @importFrom raster brick
 #' @importFrom raster projection
 #' @importFrom raster extract
@@ -12,6 +12,14 @@
 #' @import raster
 #'
 #' @export
+#'
+#' @examples
+#'
+#' PISCO.file <- "PISCOd_pp_2.1.nc"
+#' latitude <- -76.11
+#' longitude <- -13.11
+#' x <-  data.frame(PISCO.file, latitude, longitude)
+#' piscod(x)
 #'
 #' @author Geomar Perales Apaico
 #'
