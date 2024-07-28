@@ -1,6 +1,6 @@
-#' function for processing of pisco daily values to a monthly serie.
+#' Function for processing PISCO daily values into a monthly series
 #'
-#' function for processing of pisco daily values to a monthly serie, apply to precipitation,
+#' Function for processing PISCO daily values into a monthly series, apply to precipitation,
 #' temperature and evapotranspiration.
 #' @param x a dataframe with PISCO daily values.
 #' @param param OPTIONAL, default parameter is sum for precipitation and evapotranspiration,

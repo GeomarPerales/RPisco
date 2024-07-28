@@ -1,6 +1,6 @@
-#' function for processing of pisco daily/monthly values to a yearly average.
+#' Function for processing PISCO daily/monthly values into a yearly average
 #'
-#' function for processing of pisco daily/monthly values to a yearly average, apply to precipitation,
+#' Function for processing PISCO daily/monthly values into a yearly average, apply to precipitation,
 #' temperature and evapotranspiration.
 #' @param x a dataframe with PISCO daily/monthly values.
 #' @param param OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
