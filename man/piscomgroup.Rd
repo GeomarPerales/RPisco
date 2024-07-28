@@ -2,19 +2,31 @@
 % Please edit documentation in R/piscomgroup.R
 \name{piscomgroup}
 \alias{piscomgroup}
-\title{values extraction of PISCO monthly data from a stations group}
+\title{values extraction of PISCO monthly climatic databases from a stations group}
 \usage{
 piscomgroup(x, start = NULL, end = NULL)
 }
 \arguments{
-\item{x}{a dataframe with PISCO file name (in netCDF format), longitude and latitude from a stations group.}
+\item{x}{a dataframe with PISCO file name (netCDF format), longitude and latitude from a stations group.}
 
 \item{start}{OPTIONAL, start date of dataset, default value is 1981-01-01.}
 
 \item{end}{OPTIONAL, end date of dataset, default value is 2016-12-01.}
 }
 \description{
-function for extract values of PISCO monthly data from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+function for extract values of PISCO monthly climatic databases from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+}
+\examples{
+
+library(RPisco)
+
+PISCO.file <- file.path("D:", "PISCOm_pp_2.0.nc")
+station <- "Ayacucho"
+latitude <- -76.11
+longitude <- -13.11
+x <-  data.frame(station, latitude, longitude)
+piscomgroup(PISCO.file, x)
+
 }
 \author{
 Geomar Perales Apaico

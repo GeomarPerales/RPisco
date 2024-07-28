@@ -2,7 +2,7 @@
 % Please edit documentation in R/pisco2monthly.R
 \name{pisco2monthly}
 \alias{pisco2monthly}
-\title{function for processing of pisco daily values to a monthly serie.}
+\title{Function for processing PISCO daily values into a monthly series}
 \usage{
 pisco2monthly(x, param = NULL, obj = NULL)
 }
@@ -16,7 +16,7 @@ use mean for temperature.}
 column or matrix. Use col for obtain data column or matrix for obtain data matrix.}
 }
 \description{
-function for processing of pisco daily values to a monthly serie, apply to precipitation,
+Function for processing PISCO daily values into a monthly series, apply to precipitation,
 temperature and evapotranspiration.
 }
 \author{

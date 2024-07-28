@@ -2,7 +2,7 @@
 % Please edit documentation in R/yearlyavg.R
 \name{yearlyavg}
 \alias{yearlyavg}
-\title{function for processing of pisco daily/monthly values to a yearly average.}
+\title{Function for processing PISCO daily/monthly values into a yearly average}
 \usage{
 yearlyavg(x, param = NULL)
 }
@@ -13,7 +13,7 @@ yearlyavg(x, param = NULL)
 use mean for temperature.}
 }
 \description{
-function for processing of pisco daily/monthly values to a yearly average, apply to precipitation,
+Function for processing PISCO daily/monthly values into a yearly average, apply to precipitation,
 temperature and evapotranspiration.
 }
 \author{

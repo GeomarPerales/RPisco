@@ -2,7 +2,7 @@
 % Please edit documentation in R/piscom.R
 \name{piscom}
 \alias{piscom}
-\title{values extraction of PISCO monthly data}
+\title{values extraction of PISCO monthly climatic databases from a station}
 \usage{
 piscom(x, obj = NULL)
 }
@@ -13,7 +13,18 @@ piscom(x, obj = NULL)
 column or matrix. Use col for obtain data column or matrix for obtain data matrix.}
 }
 \description{
-function for extract values of PISCO monthly data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+function for extract values of PISCO monthly climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+}
+\examples{
+
+library(RPisco)
+
+PISCO.file <- file.path("D:", "PISCOm_pp_2.0.nc")
+latitude <- -76.11
+longitude <- -13.11
+x <-  data.frame(PISCO.file, latitude, longitude)
+piscom(x)
+
 }
 \author{
 Geomar Perales Apaico

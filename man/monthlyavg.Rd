@@ -2,7 +2,7 @@
 % Please edit documentation in R/monthlyavg.R
 \name{monthlyavg}
 \alias{monthlyavg}
-\title{function for processing of pisco daily values to a monthly average.}
+\title{Function for processing PISCO daily values into a monthly average}
 \usage{
 monthlyavg(x, param = NULL)
 }
@@ -13,7 +13,7 @@ monthlyavg(x, param = NULL)
 use mean for temperature.}
 }
 \description{
-function for processing of pisco daily values to a monthly average, apply to precipitation,
+Function for processing PISCO daily values into a monthly average, apply to precipitation,
 temperature and evapotranspiration.
 }
 \author{

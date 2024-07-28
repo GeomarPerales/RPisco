@@ -2,7 +2,7 @@
 % Please edit documentation in R/pisco2annual.R
 \name{pisco2annual}
 \alias{pisco2annual}
-\title{function for processing of pisco daily/monthly values to a annual serie.}
+\title{Function for processing PISCO daily/monthly values into an annual series}
 \usage{
 pisco2annual(x, param = NULL)
 }
@@ -13,7 +13,7 @@ pisco2annual(x, param = NULL)
 use mean for temperature.}
 }
 \description{
-function for processing of pisco daily/monthly values to a annual serie, apply to precipitation,
+Function for processing PISCO daily/monthly values into an annual series, apply to precipitation,
 temperature and evapotranspiration.
 }
 \author{

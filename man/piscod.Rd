@@ -2,7 +2,7 @@
 % Please edit documentation in R/piscod.R
 \name{piscod}
 \alias{piscod}
-\title{values extraction of PISCO daily databases from a station}
+\title{values extraction of PISCO daily climatic databases from a station}
 \usage{
 piscod(x, start = NULL, end = NULL)
 }
@@ -14,11 +14,13 @@ piscod(x, start = NULL, end = NULL)
 \item{end}{OPTIONAL, end date of extraction period, default value is 2016-12-31.}
 }
 \description{
-function for extract values of PISCO daily data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+function for extract values of PISCO daily climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }
 \examples{
 
-PISCO.file <- "PISCOd_pp_2.1.nc"
+library(RPisco)
+
+PISCO.file <- file.path("D:", "PISCOd_pp_2.0.nc")
 latitude <- -76.11
 longitude <- -13.11
 x <-  data.frame(PISCO.file, latitude, longitude)

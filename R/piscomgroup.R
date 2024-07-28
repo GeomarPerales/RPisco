@@ -10,8 +10,11 @@
 #' @importFrom sp coordinates
 #' @import sp
 #' @import raster
-#'
 #' @export
+#'
+#' @examples
+#'
+#' library(RPisco)
 #'
 #' PISCO.file <- file.path("D:", "PISCOm_pp_2.0.nc")
 #' station <- "Ayacucho"
