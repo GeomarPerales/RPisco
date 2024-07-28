@@ -20,8 +20,8 @@
 #' station <- "Ayacucho"
 #' latitude <- -76.11
 #' longitude <- -13.11
-#' x <-  data.frame(station, latitude, longitude)
-#' piscomgroup(PISCO.file, x)
+#' x <-  data.frame(PISCO.file, station, latitude, longitude)
+#' piscomgroup(x)
 #'
 #' @author Geomar Perales Apaico
 #'

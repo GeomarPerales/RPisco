@@ -24,8 +24,8 @@ PISCO.file <- file.path("D:", "PISCOd_pp_2.0.nc")
 station <- "Ayacucho"
 latitude <- -76.11
 longitude <- -13.11
-x <-  data.frame(station, latitude, longitude)
-piscodgroup(PISCO.file, x)
+x <-  data.frame(PISCO.file, station, latitude, longitude)
+piscodgroup(x)
 
 }
 \author{

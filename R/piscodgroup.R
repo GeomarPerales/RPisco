@@ -21,14 +21,12 @@
 #' station <- "Ayacucho"
 #' latitude <- -76.11
 #' longitude <- -13.11
-#' x <-  data.frame(station, latitude, longitude)
-#' piscodgroup(PISCO.file, x)
+#' x <-  data.frame(PISCO.file, station, latitude, longitude)
+#' piscodgroup(x)
 #'
 #' @author Geomar Perales Apaico
 #'
 #' @name piscodgroup
-
-piscodgroup <-function(x, ...) UseMethod("piscodgroup")
 
 piscodgroup <- function(x, start = NULL, end = NULL){
   x <- x[,1:4]
