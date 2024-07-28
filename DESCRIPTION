@@ -10,7 +10,7 @@ Description: RPisco is a package with tools for manipulate PISCO climatic databa
 License: GPL
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.2
 Date/Publication: 2021-05-03
 Imports: sp, raster
 Depends: R (>= 2.10)

@@ -1,6 +1,6 @@
-#' values extraction of PISCO monthly data
+#' values extraction of PISCO monthly climatic databases from a station
 #'
-#' function for extract values of PISCO monthly data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+#' function for extract values of PISCO monthly climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 #' @param x a dataframe with PISCO file name (in netCDF format), longitude and latitude of station.
 #' @param obj OPTIONAL, default parameter is NULL, use this parameter for obtain data in
 #'column or matrix. Use col for obtain data column or matrix for obtain data matrix.
@@ -11,6 +11,14 @@
 #' @import sp
 #' @import raster
 #' @export
+#'
+#' @examples
+#'
+#' PISCO.file <- "PISCOm_pp_2.1.nc"
+#' latitude <- -76.11
+#' longitude <- -13.11
+#' x <-  data.frame(PISCO.file, latitude, longitude)
+#' piscom(x)
 #'
 #' @author Geomar Perales Apaico
 #'

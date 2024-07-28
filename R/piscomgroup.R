@@ -1,7 +1,7 @@
-#' values extraction of PISCO monthly data from a stations group
+#' values extraction of PISCO monthly climatic databases from a stations group
 #'
-#' function for extract values of PISCO monthly data from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
-#' @param x a dataframe with PISCO file name (in netCDF format), longitude and latitude from a stations group.
+#' function for extract values of PISCO monthly climatic databases from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+#' @param x a dataframe with PISCO file name (netCDF format), longitude and latitude from a stations group.
 #' @param start OPTIONAL, start date of dataset, default value is 1981-01-01.
 #' @param end OPTIONAL, end date of dataset, default value is 2016-12-01.
 #' @importFrom raster brick
@@ -12,6 +12,13 @@
 #' @import raster
 #'
 #' @export
+#'
+#' PISCO.file <- "PISCOm_pp_2.1.nc"
+#' station <- "Ayacucho"
+#' latitude <- -76.11
+#' longitude <- -13.11
+#' x <-  data.frame(station, latitude, longitude)
+#' piscomgroup(PISCO.file, x)
 #'
 #' @author Geomar Perales Apaico
 #'
