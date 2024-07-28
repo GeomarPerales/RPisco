@@ -17,7 +17,7 @@
 #'
 #'library(RPisco)
 #'
-#' PISCO.file <- "D:/PISCOd_pp_2.1.nc"
+#' PISCO.file <- "D://PISCOd_pp_2.1.nc"
 #' latitude <- -76.11
 #' longitude <- -13.11
 #' x <-  data.frame(PISCO.file, latitude, longitude)
