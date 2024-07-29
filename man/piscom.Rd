@@ -7,7 +7,7 @@
 piscom(x, obj = NULL)
 }
 \arguments{
-\item{x}{a dataframe with PISCO file name (in netCDF format), longitude and latitude of station.}
+\item{x}{a dataframe with PISCO file name (netCDF format), longitude and latitude of station.}
 
 \item{obj}{OPTIONAL, default parameter is NULL, use this parameter for obtain data in
 column or matrix. Use col for obtain data column or matrix for obtain data matrix.}

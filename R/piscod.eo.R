@@ -13,6 +13,16 @@
 #'
 #' @export
 #'
+#'@examples
+#'
+#'library(RPisco)
+#'
+#' PISCO.file <- "D:/0-BD-Pisco/0-Evp"
+#' latitude <- -76.11
+#' longitude <- -13.11
+#' x <-  data.frame(PISCO.file, latitude, longitude)
+#' piscod.eo(x)
+#'
 #' @author Geomar Perales Apaico
 #'
 #' @name piscod.eo
@@ -50,6 +60,7 @@ piscod.eo <- function(x){
   date <- gsub("X", "", rownames(Pisco.df))
   date <- as.Date(date, format = "%Y.%m.%d")
   Pisco.df <- data.frame(date = date, values = Pisco.df)
+  rownames(Pisco.df) <- NULL
   return(Pisco.df)
 }
 

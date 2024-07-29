@@ -13,6 +13,17 @@ piscod.eo(x)
 function for extract values of PISCO evapotranspiration daily climatic databases,
 PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }
+\examples{
+
+library(RPisco)
+
+PISCO.file <- "D:/0-BD-Pisco/0-Evp"
+latitude <- -76.11
+longitude <- -13.11
+x <-  data.frame(PISCO.file, latitude, longitude)
+piscod.eo(x)
+
+}
 \author{
 Geomar Perales Apaico
 }
