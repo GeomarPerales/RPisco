@@ -11,38 +11,30 @@ vignette: >
 knitr::opts_chunk$set(error = TRUE)
 ```
 
-# **RPisco: tools for manipulate PISCO data of SENAMHI (Peru)**
+# **RPisco: tools for manipulate PISCO climatic databases of SENAMHI (Peru)**
 
-# **RPisco: Herramientas para manipular datos PISCO del SENAMHI (Perú)**
-
-El paquete RPisco contiene herramientas para manipular datos de precipitación y temperatura de PISCO (SENAMHI).
-
-RPisco package contains tools for manipulate precipitation and temperature data of PISCO (SENAMHI).
+The RPisco package contains tools for manipulating PISCO climatic databases from SENAMHI (Peru).
 
 ```{r}
 library(RPisco)
 ```
 
-**1. Installation - Instalación**
-
-Instale el paquete RPisco desde Github: 
+**1. Installation**
 
 Install RPisco from Github:
 ```	
 > library(devtools)
 > install_github("GeomarPerales/RPisco")		
 ```
-**2. RPisco Package - Paquete RPisco**
+**2. RPisco Package*
 
-El paquete RPisco contiene las siguientes herramientas: extracción de valores de datos PISCO diarios y mensuales, procesar los datos de PISCO de las series diarias/mensuales a series anuales, y obtener el promedio mensual/anual de la serie PISCO mensual/anual.
-
-RPisco package contains the following tools: values extraction of daily/monthly PISCO data, processing PISCO data from daily/monthly series to annual series, and obtain monthly/yearly average from PISCO monthly/yearly serie.
+The RPisco package contains the following tools: extraction of daily/monthly PISCO data, processing PISCO data from daily/monthly series to annual series, and obtaining monthly/yearly averages from PISCO data.
 
 **3. Precipitation - Precipitación**
 
-- **3.1 Average Rainfall - Precipitación media**
+- **3.1 Average Rainfall**
 
-Daily data - Datos diarios
+Daily data
 ```{r}
 PISCO.file <- "D:\\PISCOd_pp_2.1.nc"
 x <- data.frame(PISCO.file, -76.11, -13.11)
@@ -50,7 +42,7 @@ data <- piscod(x)
 head(data) 
 ```
 
-Monthly data - Datos Mensuales
+Monthly data
 ```{r}
 PISCO.file <- "D:\\PISCOm_pp_2.1.nc"
 x <- data.frame(PISCO.file, -76.11, -13.11)
@@ -62,7 +54,7 @@ head(data)
 
 - **4.1 Minimum Temperature - Temperatura mínima**
 
-Daily data - Datos diarios
+Daily data
 ```{r}
 PISCO.file <- "D:\\PISCOd_tmn_v1.1.nc"
 x <- data.frame(PISCO.file, -76.11, -13.11)
@@ -70,7 +62,7 @@ data <- piscod(x)
 head(data)
 ```
 
-Monthly data - Datos Mensuales
+Monthly data
 ```{r}
 PISCO.file <- "D:\\PISCOm_tmn_v1.1.nc"
 x <- data.frame(PISCO.file, -76.11, -13.11)
@@ -78,9 +70,9 @@ data <- piscom(x)
 head(data)
 ```
 
-- **4.2 Maximum Temperature - Temperatura máxima**
+- **4.2 Maximum Temperature**
 
-Daily data - Datos diarios
+Daily data
 ```{r}
 PISCO.file <- "D:\\PISCOd_tmx_v1.1.nc"
 x <- data.frame(PISCO.file, -76.11, -13.11)
@@ -88,7 +80,7 @@ data <- piscod(x)
 head(data)
 ```
 
-Monthly data - Datos Mensuales
+Monthly data
 ```{r}
 PISCO.file <- "D:\\PISCOm_tmx_v1.1.nc"
 x <- data.frame(PISCO.file, -76.11, -13.11)
@@ -96,36 +88,7 @@ data <- piscom(x)
 head(data)
 ```
 
-**5. Study Case: Huarpa Basin - Caso de estudio: Cuenca Huarpa**
 
-- **Stations data of Huarpa Basin - Datos de estaciones de la Cuenca Huarpa**
-```{r}
-head(Huarpa.stations)
-```
+**6. References**
 
-- **Extraction of monthly PISCO data - Extracción de datos mensuales de PISCO.**
-
-```{r}
-PISCO.file <- "D:\\PISCOm_pp_2.1.nc"
-monthly.data <- piscomgroup(data.frame(PISCO.file, Huarpa.stations))
-head(monthly.data)
-```
-
-- **Monthly average of San Miguel station - Promedio mensual de la estación San Miguel**
-
-```{r}
-monthlyavg(data.frame(monthly.data$date, monthly.data[,2]))
-```
-
-- **Yearly average of San Miguel station - Promedio anual de la estación San Miguel**
-```{r}
-yearlyavg(data.frame(monthly.data$date, monthly.data[,2]))
-```
-- **Annual serie of San Miguel station - serie anual de la estación San Miguel**
-```{r}
-head(pisco2annual(data.frame(monthly.data$date, monthly.data[,2])))
-```
-
-**6. References - Referencias**
-
-Aybar. (2017). Uso del producto grillado PISCO de precipitación en estudios, investigaciones sistemas operacionales de monitoreo y pronóstico hidrometeorológico. Lima: SENAMHI.
+Aybar. (2017). Use of the gridded PISCO precipitation product in studies, research, and operational hydrometeorological monitoring and forecasting systems. Lima: SENAMHI.
