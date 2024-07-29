@@ -46,9 +46,9 @@ piscod.eo <- function(x){
     points <- raster::extract(readAll(variable.raster[[1]]), coord, cellnumbers = T)[,1]
     Pisco.data[[i]] <- t(variable.raster[points])
   }
-  Pisco.df <- do.call( rbind, Pisco.data)
+  Pisco.df <- do.call(rbind, Pisco.data)
   date <- gsub("X", "", rownames(Pisco.df))
-  date <- as.Date(date, format = "%d.%m.%Y")
+  date <- as.Date(date, format = "%Y.%m.%d")
   Pisco.df <- data.frame(date = date, values = Pisco.df)
   return(Pisco.df)
 }
