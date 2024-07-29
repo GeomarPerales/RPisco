@@ -56,7 +56,7 @@ piscodgroup <- function(x, start = NULL, end = NULL){
   Pisco.data <- t(variable.raster[points])
   study.range <- data.frame(Date = seq(from = as.Date("1981-01-01"), to = as.Date("2016-12-31"), by = "days"))
 
-  Pisco.data <- cbind(study.range, format(Pisco.data, scientific = F, digits = 2))
+  Pisco.data <- cbind(study.range, round(Pisco.data, digits = 2))
 
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
   colnames(Pisco.data) <- c("date", as.vector(name))
