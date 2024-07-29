@@ -13,6 +13,17 @@
 #'
 #' @export
 #'
+#'#' @examples
+#'
+#' library(RPisco)
+#'
+#' PISCO.file <- file.path("D:", "PISCOm_pp_2.0.nc")
+#' latitude <- -76.11
+#' longitude <- -13.11
+#' x <-  data.frame(PISCO.file, latitude, longitude)
+#' piscomgroup(x)
+#'
+#'
 #' @author Geomar Perales Apaico
 #'
 #' @name piscod.eo
