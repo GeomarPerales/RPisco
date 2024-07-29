@@ -2,15 +2,16 @@
 % Please edit documentation in R/piscod.eo.R
 \name{piscod.eo}
 \alias{piscod.eo}
-\title{values extraction of PISCO evapotranspiration daily data}
+\title{values extraction of PISCO evapotranspiration daily climatic databases}
 \usage{
 piscod.eo(x)
 }
 \arguments{
-\item{x}{a dataframe with PISCO files folder (in netCDF format), longitude and latitude of station.}
+\item{x}{a dataframe with PISCO files folder (netCDF format) of evapotranspiration, longitude and latitude of station.}
 }
 \description{
-function for extract values of PISCO evapotranspiration daily data, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+function for extract values of PISCO evapotranspiration daily climatic databases,
+PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }
 \author{
 Geomar Perales Apaico
