@@ -27,8 +27,6 @@
 #'
 #' @name piscod
 
-piscod <-function(x, ...) UseMethod("piscod")
-
 piscod <- function(x, start = NULL, end = NULL){
   x <- x[,1:3]
   colnames(x) <- c("nc","v1", "v2")
@@ -53,8 +51,8 @@ piscod <- function(x, start = NULL, end = NULL){
   points <- raster::extract(variable.raster[[1]], coord, cellnumbers = T)[,1]
   Pisco.data <- t(variable.raster[points])
 
-  study.range <- data.frame( Date = seq( from = as.Date("1981-01-01"), to = as.Date("2016-12-31"), by = "days"))
-  Pisco.data <- cbind( study.range, format(as.vector(Pisco.data), scientific = F, digits = 2))
+  study.range <- data.frame(Date = seq(from = as.Date("1981-01-01"), to = as.Date("2016-12-31"), by = "days"))
+  Pisco.data <- cbind(study.range, round(as.vector(Pisco.data), digits = 2))
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
   colnames(Pisco.data) <- c("date", "values")
 
