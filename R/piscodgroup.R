@@ -57,10 +57,10 @@ piscodgroup <- function(x){
 
   date <- gsub("X", "", rownames(Pisco.data))
   date <- as.Date(date, format = "%Y.%m.%d")
-  Pisco.data <- data.frame(date = date, values = Pisco.data)
+  Pisco.data <- data.frame(date = date, values = round(Pisco.data, digits = 2))
   rownames(Pisco.data) <- NULL
-  return(Pisco.data)
   write.xlsx(Pisco.data, "pisco_daily.xlsx", overwrite = TRUE, row.names = FALSE)
+  return(Pisco.data)
 
 }
 

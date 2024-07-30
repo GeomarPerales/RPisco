@@ -51,12 +51,12 @@ piscom <- function(x){
   points <- raster::extract(variable.raster[[1]], coord, cellnumbers = T)[,1]
   Pisco.data <- t(variable.raster[points])
 
-  date <- gsub("X", "", rownames(Pisco.data))
-  date <- as.Date(date, format = "%Y.%m.%d")
-  Pisco.data <- data.frame(date = date, values = Pisco.data)
-  rownames(Pisco.data) <- NULL
+  #date <- gsub("X", "", rownames(Pisco.data))
+  #date <- as.Date(date, format = "%Y.%m.%d")
+  #Pisco.data <- data.frame(date = date, values = round(Pisco.data, digits = 2))
+  #rownames(Pisco.data) <- NULL
+  #write.xlsx(Pisco.data, "pisco_monthly.xlsx", overwrite = TRUE, row.names = FALSE)
   return(Pisco.data)
-  write.xlsx(Pisco.data, "pisco_monthly.xlsx", overwrite = TRUE, row.names = FALSE)
 
 }
 #' @rdname piscom
