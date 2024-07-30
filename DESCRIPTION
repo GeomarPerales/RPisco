@@ -12,9 +12,9 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
 Date/Publication: 2021-05-03
-Imports: sp, raster
+Imports: sp, raster, openxlsx
 Depends: R (>= 2.10)
-Suggests: knitr, rmarkdown, ncdf4, openxlsx, testthat (>= 3.0.0)
+Suggests: knitr, rmarkdown, ncdf4, testthat (>= 3.0.0)
 VignetteBuilder: knitr
 NeedsCompilation: no
 Packaged: 2021-10-27 11:13:45 UTC; LENOVO
