@@ -6,7 +6,6 @@
 #' @importFrom raster projection
 #' @importFrom raster extract
 #' @importFrom sp coordinates
-#' @importFrom openxlsx write.xlsx
 #' @import sp
 #' @import raster
 #' @import openxlsx
