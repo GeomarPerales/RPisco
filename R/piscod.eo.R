@@ -58,6 +58,7 @@ piscod.eo <- function(x){
     Pisco.data[[i]] <- t(variable.raster[points])
   }
   Pisco.df <- do.call(rbind, Pisco.data)
+
   date <- gsub("X", "", rownames(Pisco.df))
   date <- as.Date(date, format = "%Y.%m.%d")
   Pisco.df <- data.frame(date = date, values = Pisco.df)

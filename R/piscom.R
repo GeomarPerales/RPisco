@@ -2,7 +2,6 @@
 #'
 #' function for extract values of PISCO monthly climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 #' @param x A dataframe containing the PISCO file name (in netCDF format), longitude, and latitude of the station.
-#' @param type OPTIONAL, default is "stable". Change to "unstable" to modify the study range.
 #' @importFrom raster brick
 #' @importFrom raster projection
 #' @importFrom raster extract
@@ -51,14 +50,10 @@ piscom <- function(x, type = "stable"){
   points <- raster::extract(variable.raster[[1]], coord, cellnumbers = T)[,1]
   Pisco.data <- t(variable.raster[points])
 
-
-
-
-  study.range <- data.frame( Date = seq( from = as.Date( "1981-01-01"), to = as.Date( "2016-12-01"), by = "months"))
-  Pisco.data <- cbind( study.range, round(as.vector(Pisco.data), digits = 2))
-  row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
-  colnames(Pisco.data) <- c("date", "values")
-
+  date <- gsub("X", "", rownames(Pisco.data))
+  date <- as.Date(date, format = "%Y.%m.%d")
+  Pisco.data <- data.frame(date = date, values = Pisco.data)
+  rownames(Pisco.data) <- NULL
   return(Pisco.data)
   write.xlsx(Pisco.data, "pisco_monthly.xlsx", overwrite = TRUE, row.names = FALSE)
 

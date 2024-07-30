@@ -26,7 +26,7 @@
 #'
 #' @name piscod
 
-piscod <- function(x, version = NULL){
+piscod <- function(x){
   x <- x[,1:3]
   colnames(x) <- c("nc","v1", "v2")
   if(x$v1[1] < x$v2[1]){
@@ -49,11 +49,11 @@ piscod <- function(x, version = NULL){
   raster::projection(coord) <- raster::projection(variable.raster)
   points <- raster::extract(variable.raster[[1]], coord, cellnumbers = T)[,1]
   Pisco.data <- t(variable.raster[points])
-  study.range <- data.frame(Date = seq(from = as.Date("1981-01-01"), to = as.Date("2016-12-31"), by = "days"))
 
-  Pisco.data <- cbind(study.range, round(as.vector(Pisco.data), digits = 2))
-  row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
-  colnames(Pisco.data) <- c("date", "values")
+  date <- gsub("X", "", rownames(Pisco.data))
+  date <- as.Date(date, format = "%Y.%m.%d")
+  Pisco.data <- data.frame(date = date, values = Pisco.data)
+  rownames(Pisco.data) <- NULL
   return(Pisco.data)
   write.xlsx(Pisco.data, "pisco_daily.xlsx", overwrite = TRUE, row.names = FALSE)
 
