@@ -8,10 +8,8 @@
 #' @importFrom raster extract
 #' @importFrom raster readAll
 #' @importFrom sp coordinates
-#' @importFrom openxlsx write.xlsx
 #' @import sp
 #' @import raster
-#' @import openxlsx
 #'
 #' @export
 #'
