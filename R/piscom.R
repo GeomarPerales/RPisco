@@ -2,8 +2,6 @@
 #'
 #' function for extract values of PISCO monthly climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 #' @param x A dataframe containing the PISCO file name (in netCDF format), longitude, and latitude of the station.
-#' @param matrix OPTIONAL, default is "OFF". Use this parameter to specify the format of the output data.
-#'        Set to "OFF" for data in column format, or "YES" for data in matrix format.
 #' @param type OPTIONAL, default is "stable". Change to "unstable" to modify the study range.
 #' @importFrom raster brick
 #' @importFrom raster projection
@@ -11,6 +9,7 @@
 #' @importFrom sp coordinates
 #' @import sp
 #' @import raster
+#' @import openxlsx
 #' @export
 #'
 #' @examples
@@ -27,7 +26,7 @@
 #'
 #' @name piscom
 
-piscom <- function(x, matrix = ){
+piscom <- function(x, type = "stable"){
   x <- x[,1:3]
   colnames(x) <- c("nc","v1", "v2")
   if(x$v1[1] < x$v2[1]){
@@ -51,31 +50,13 @@ piscom <- function(x, matrix = ){
   points <- raster::extract(variable.raster[[1]], coord, cellnumbers = T)[,1]
   Pisco.data <- t(variable.raster[points])
 
+
+
+
   study.range <- data.frame( Date = seq( from = as.Date( "1981-01-01"), to = as.Date( "2016-12-01"), by = "months"))
   Pisco.data <- cbind( study.range, round(as.vector(Pisco.data), digits = 2))
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
   colnames(Pisco.data) <- c("date", "values")
 
-  if(is.null(matrix)){
-    colnames(Pisco.data) <- c("date", "values")
-    return(Pisco.data)
-
-  } else if(matrix == "OFF"){
-    colnames(Pisco.data) <- c("date", "values")
-    return(Pisco.data)
-
-  } else if(matrix == "matrix"){
-    Pisco.data <- t(matrix(Pisco.data[,2], 12, 36))
-    Pisco.data <- data.frame(Pisco.data)
-    colnames(Pisco.data) <- month.abb
-    return(Pisco.data)
-
-  } else if(is.na(match(matrix, c("col", "matrix")))){
-    stop("obj parameter not recognized")
-
-  } else {
-    stop("obj parameter not recognized")
-
-  }
 }
 #' @rdname piscom
