@@ -2,7 +2,6 @@
 #'
 #' function for extract values of PISCO monthly climatic databases from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 #' @param x A dataframe containing the PISCO file name (in netCDF format), longitude and latitude from a stations group.
-#' @param type OPTIONAL, default is "stable". Change to "unstable" to modify the study range.
 #' @importFrom raster brick
 #' @importFrom raster projection
 #' @importFrom raster extract
@@ -28,7 +27,7 @@
 #'
 #' @name piscomgroup
 
-piscomgroup <- function(x, type = "stable"){
+piscomgroup <- function(x){
   x <- x[,1:4]
   colnames(x) <- c("nc", "name","v1", "v2")
   if(x$v1[1] < x$v2[1]){

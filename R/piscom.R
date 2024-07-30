@@ -26,7 +26,7 @@
 #'
 #' @name piscom
 
-piscom <- function(x, type = "stable"){
+piscom <- function(x){
   x <- x[,1:3]
   colnames(x) <- c("nc","v1", "v2")
   if(x$v1[1] < x$v2[1]){
