@@ -53,8 +53,7 @@ piscodgroup <- function(x){
   points <- raster::extract(variable.raster[[1]], coord, cellnumbers = T)[,1]
   Pisco.data <- t(variable.raster[points])
 
-  date <- gsub("X", "", rownames(Pisco.data))
-  date <- as.Date(date, format = "%Y.%m.%d")
+  date <- seq(from = as.Date("1981-01-01"), by = "days", length.out = nrow(Pisco.data))
   Pisco.data <- data.frame(date = date, values = round(Pisco.data, digits = 2))
   rownames(Pisco.data) <- NULL
   return(Pisco.data)
