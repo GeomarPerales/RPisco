@@ -8,7 +8,6 @@
 #' @importFrom sp coordinates
 #' @import sp
 #' @import raster
-#' @import openxlsx
 #'
 #' @export
 #'
