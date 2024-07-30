@@ -17,9 +17,9 @@
 #' library(RPisco)
 #'
 #' PISCO.file <- file.path("D:", "PISCOm_pp_2.0.nc")
-#' station <- "Ayacucho"
-#' latitude <- -76.11
-#' longitude <- -13.11
+#' station <- c("Ayacucho", "Coracora")
+#' latitude <- c(-76.11, -73.78)
+#' longitude <- c(-13.11, -15.01)
 #' x <-  data.frame(PISCO.file, station, latitude, longitude)
 #' piscomgroup(x)
 #'
