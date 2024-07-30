@@ -65,7 +65,6 @@ piscod.eo <- function(x){
   Pisco.df <- data.frame(date = date, values = Pisco.df)
   rownames(Pisco.df) <- NULL
   return(Pisco.df)
-  write.xlsx(Pisco.df, "pisco_daily.xlsx", overwrite = TRUE, row.names = FALSE)
 }
 
 #' @rdname piscod.eo

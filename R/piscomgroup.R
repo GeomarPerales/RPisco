@@ -57,7 +57,6 @@ piscomgroup <- function(x){
   date <- as.Date(date, format = "%Y.%m.%d")
   Pisco.data <- data.frame(date = date, values = round(Pisco.data, digits = 2))
   rownames(Pisco.data) <- NULL
-  write.xlsx(Pisco.data, "pisco_monthly.xlsx", overwrite = TRUE, row.names = FALSE)
   return(Pisco.data)
 
 }
