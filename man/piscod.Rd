@@ -4,14 +4,10 @@
 \alias{piscod}
 \title{values extraction of PISCO daily climatic databases from a station}
 \usage{
-piscod(x, start = NULL, end = NULL)
+piscod(x)
 }
 \arguments{
-\item{x}{a dataframe with PISCO file name (netCDF format), longitude and latitude of station.}
-
-\item{start}{OPTIONAL, start date of extraction period, default value is 1981-01-01.}
-
-\item{end}{OPTIONAL, end date of extraction period, default value is 2016-12-31.}
+\item{x}{A dataframe containing the PISCO file name (in netCDF format), longitude and latitude of station.}
 }
 \description{
 function for extract values of PISCO daily climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.

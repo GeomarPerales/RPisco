@@ -4,13 +4,10 @@
 \alias{piscom}
 \title{values extraction of PISCO monthly climatic databases from a station}
 \usage{
-piscom(x, obj = NULL)
+piscom(x)
 }
 \arguments{
-\item{x}{a dataframe with PISCO file name (netCDF format), longitude and latitude of station.}
-
-\item{obj}{OPTIONAL, default parameter is NULL, use this parameter for obtain data in
-column or matrix. Use col for obtain data column or matrix for obtain data matrix.}
+\item{x}{A dataframe containing the PISCO file name (in netCDF format), longitude, and latitude of the station.}
 }
 \description{
 function for extract values of PISCO monthly climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
