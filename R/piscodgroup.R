@@ -1,9 +1,7 @@
 #' values extraction of PISCO daily climatic databases from a stations group.
 #'
 #' function for extract values of PISCO daily climatic databases from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
-#' @param x a dataframe with PISCO file name (netCDF format), longitude and latitude from stations group.
-#' @param start OPTIONAL, start date of extraction period, default value is 1981-01-01.
-#' @param end OPTIONAL, end date of extraction period, default value is 2016-12-31.
+#' @param x A dataframe containing the PISCO file name (in netCDF format), longitude and latitude from stations group.
 #' @importFrom raster brick
 #' @importFrom raster projection
 #' @importFrom raster extract
@@ -28,7 +26,7 @@
 #'
 #' @name piscodgroup
 
-piscodgroup <- function(x, start = NULL, end = NULL){
+piscodgroup <- function(x){
   x <- x[,1:4]
   colnames(x) <- c("nc", "name","v1", "v2")
   if(x$v1[1] < x$v2[1]){
@@ -61,28 +59,7 @@ piscodgroup <- function(x, start = NULL, end = NULL){
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
   colnames(Pisco.data) <- c("date", as.vector(name))
 
-  if(is.null(start) & is.null(end)){
-    return(Pisco.data)
-  } else if(!is.null(start)  & !is.null(end)){
-    if( sapply( start, function(x) !all(is.na(as.Date(as.character(x),format="%Y-%m-%d")))) == TRUE &
-        sapply( start, function(x) !all(is.na(as.Date(as.character(x),format="%Y-%m-%d")))) == TRUE){
-      start.out <- start
-      end.out <- end
-      Pisco.data <- Pisco.data[(Pisco.data$Days >= start.out & Pisco.data$Days <= end.out),]
-      return(Pisco.data)
-    } else {
-      stop("date format not recognized, date format is %Y-%m-%d ")
-    }
-
-  } else if(!is.null(start) & sapply( start,
-                                      function(x) !all(is.na(as.Date(as.character(x),format="%Y-%m-%d")))) == TRUE){
-    start.out <- start
-    end.out <- "2016-12-01"
-    Pisco.data <- Pisco.data[(Pisco.data$Days >= start.out & Pisco.data$Days <= end.out),]
-    return(Pisco.data)
-  } else {
-    stop("date format not recognized, date format is %Y-%m-%d ")
-  }
+  return(Pisco.data)
 }
 
 #' @rdname piscodgroup

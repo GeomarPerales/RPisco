@@ -1,9 +1,10 @@
 #' values extraction of PISCO monthly climatic databases from a station
 #'
 #' function for extract values of PISCO monthly climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
-#' @param x a dataframe with PISCO file name (netCDF format), longitude and latitude of station.
-#' @param obj OPTIONAL, default parameter is NULL, use this parameter for obtain data in
-#'column or matrix. Use col for obtain data column or matrix for obtain data matrix.
+#' @param x A dataframe containing the PISCO file name (in netCDF format), longitude, and latitude of the station.
+#' @param matrix OPTIONAL, default is "OFF". Use this parameter to specify the format of the output data.
+#'        Set to "OFF" for data in column format, or "YES" for data in matrix format.
+#' @param type OPTIONAL, default is "stable". Change to "unstable" to modify the study range.
 #' @importFrom raster brick
 #' @importFrom raster projection
 #' @importFrom raster extract
@@ -26,7 +27,7 @@
 #'
 #' @name piscom
 
-piscom <- function(x, obj = NULL){
+piscom <- function(x, matrix = ){
   x <- x[,1:3]
   colnames(x) <- c("nc","v1", "v2")
   if(x$v1[1] < x$v2[1]){
@@ -55,21 +56,21 @@ piscom <- function(x, obj = NULL){
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
   colnames(Pisco.data) <- c("date", "values")
 
-  if(is.null(obj)){
+  if(is.null(matrix)){
     colnames(Pisco.data) <- c("date", "values")
     return(Pisco.data)
 
-  } else if(obj == "col"){
+  } else if(matrix == "OFF"){
     colnames(Pisco.data) <- c("date", "values")
     return(Pisco.data)
 
-  } else if(obj == "matrix"){
+  } else if(matrix == "matrix"){
     Pisco.data <- t(matrix(Pisco.data[,2], 12, 36))
     Pisco.data <- data.frame(Pisco.data)
     colnames(Pisco.data) <- month.abb
     return(Pisco.data)
 
-  } else if(is.na(match(obj, c("col", "matrix")))){
+  } else if(is.na(match(matrix, c("col", "matrix")))){
     stop("obj parameter not recognized")
 
   } else {

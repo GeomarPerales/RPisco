@@ -1,9 +1,10 @@
 #' values extraction of PISCO monthly climatic databases from a stations group
 #'
 #' function for extract values of PISCO monthly climatic databases from a stations group, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
-#' @param x a dataframe with PISCO file name (netCDF format), longitude and latitude from a stations group.
-#' @param start OPTIONAL, start date of dataset, default value is 1981-01-01.
-#' @param end OPTIONAL, end date of dataset, default value is 2016-12-01.
+#' @param x A dataframe containing the PISCO file name (in netCDF format), longitude and latitude from a stations group.
+#' @param matrix OPTIONAL, default is "OFF". Use this parameter to specify the format of the output data.
+#'        Set to "OFF" for data in column format, or "YES" for data in matrix format.
+#' @param type OPTIONAL, default is "stable". Change to "unstable" to modify the study range.
 #' @importFrom raster brick
 #' @importFrom raster projection
 #' @importFrom raster extract
