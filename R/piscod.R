@@ -55,6 +55,7 @@ piscod <- function(x, version = NULL){
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
   colnames(Pisco.data) <- c("date", "values")
   return(Pisco.data)
+  write.xlsx(Pisco.data, "pisco_daily.xlsx", overwrite = TRUE, row.names = FALSE)
 
 }
 

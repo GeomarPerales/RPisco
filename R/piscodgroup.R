@@ -61,6 +61,7 @@ piscodgroup <- function(x){
   colnames(Pisco.data) <- c("date", as.vector(name))
 
   return(Pisco.data)
+  write.xlsx(Pisco.data, "pisco_daily.xlsx", overwrite = TRUE, row.names = FALSE)
 }
 
 #' @rdname piscodgroup

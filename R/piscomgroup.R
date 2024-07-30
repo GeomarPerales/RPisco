@@ -63,6 +63,7 @@ piscomgroup <- function(x, type = "stable"){
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
   colnames(Pisco.data) <- c("date", as.vector(name))
   return(Pisco.data)
+  write.xlsx(Pisco.data, "pisco_monthly.xlsx", overwrite = TRUE, row.names = FALSE)
 
 }
 #' @rdname piscomgroup

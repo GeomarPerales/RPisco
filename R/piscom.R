@@ -10,6 +10,7 @@
 #' @import sp
 #' @import raster
 #' @import openxlsx
+#'
 #' @export
 #'
 #' @examples
@@ -57,6 +58,9 @@ piscom <- function(x, type = "stable"){
   Pisco.data <- cbind( study.range, round(as.vector(Pisco.data), digits = 2))
   row.names(Pisco.data) <- seq(1, nrow(Pisco.data), 1)
   colnames(Pisco.data) <- c("date", "values")
+
+  return(Pisco.data)
+  write.xlsx(Pisco.data, "pisco_monthly.xlsx", overwrite = TRUE, row.names = FALSE)
 
 }
 #' @rdname piscom
