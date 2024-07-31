@@ -32,10 +32,11 @@ yearlyavg <- function(x, param = NULL){
     stop("parameter not recognized")
   }
 
-  annual = strftime(x$date, "%Y")
-  annual.sum = aggregate( as.numeric(as.vector(x$values)), by = list(annual), FUN = opt)
+  annual <- strftime(x$date, "%Y")
+  annual.sum <- aggregate( as.numeric(as.vector(x$values)), by = list(annual), FUN = opt)
   colnames(annual.sum) <- c("date","values")
-  annual.mean = mean(annual.sum$values)
+  annual.mean <- mean(annual.sum$values)
+  annual.mean$date <- as.Date(paste0(annual.mean$date, "-01"))
   return(annual.mean)
 }
 
