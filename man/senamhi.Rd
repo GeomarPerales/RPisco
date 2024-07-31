@@ -11,7 +11,7 @@ function for get all stations information (coordinates and altitude) of SENAMHI 
 }
 \examples{
 
-stations <- stations()
+stations <- senamhi()
 }
 \author{
 Geomar Perales Apaico
