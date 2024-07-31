@@ -2,7 +2,7 @@
 #'
 #' function for search SENAMHI stations information by coordinates (latitude and longitude) and maximum distance inside SENAMHI data web.
 #' @param x numeric; numeric vector of coordinates (latitude and longitude)
-#' @param stations stations information of SENAMHI web scraping
+#' @param senamhi stations information of SENAMHI web scraping
 #' @param dist_max numeric, value of maximum distance from stations to point (kms)
 #'
 #' @export
@@ -13,7 +13,7 @@
 #' dist_max <- 50
 #' stations <- senamhi()
 #'
-#' searchloc(x, senamhi(), dist_max)
+#' senamhi.find(x, senamhi(), dist_max)
 #'
 #' @author Geomar Perales Apaico
 #'
