@@ -8,7 +8,7 @@
 #'
 #' @examples
 #'
-#' stations <- stations()
+#' stations <- senamhi()
 #
 #' @author Geomar Perales Apaico
 #'
