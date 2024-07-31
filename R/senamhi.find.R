@@ -19,7 +19,7 @@
 #'
 #' @name senamhi.find
 
-senamhi.find <- function(x, stations, dist_max) {
+senamhi.find <- function(x, senamhi, dist_max) {
 
   lat1 <- as.numeric(as.character(stations$lat))
   lon1 <- as.numeric(as.character(stations$lon))
