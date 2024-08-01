@@ -33,6 +33,7 @@ pisco2monthly <- function(x, param = NULL){
 
   date <- strftime(x$date, "%Y-%m")
   values.sum <- aggregate( as.numeric(as.vector(x$values)), by = list(date), FUN = opt)
+  colnames(values.sum) <- c("date", "values")
   values.sum$date <- as.Date(paste0(values.sum$date, "-01"))
   return(values.sum)
 

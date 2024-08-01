@@ -21,8 +21,8 @@
 
 senamhi.find <- function(x, senamhi, dist_max) {
 
-  lat1 <- as.numeric(as.character(stations$lat))
-  lon1 <- as.numeric(as.character(stations$lon))
+  lat1 <- as.numeric(as.character(senamhi$lat))
+  lon1 <- as.numeric(as.character(senamhi$lon))
 
   if(is.null(x)){
     return(print("localizacion no definida"))
@@ -56,9 +56,8 @@ senamhi.find <- function(x, senamhi, dist_max) {
   a <- sin(dlat/2)^2 + cos(lat1_rad) * cos(lat2_rad) * sin(dlon/2)^2
   c <- 2 * atan2(sqrt(a), sqrt(1-a))
   distance <- R * c
-  stations$dist <- round(distance, 2)
+  senamhi$dist <- round(distance, 2)
 
-  estaciones_cercanas <- stations[stations$dist <= dist_max, ]
+  estaciones_cercanas <- senamhi[senamhi$dist <= dist_max, ]
   return(estaciones_cercanas)
-  print("desarrollado por Hydroprime")
 }

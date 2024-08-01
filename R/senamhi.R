@@ -61,5 +61,4 @@ senamhi <- function() {
 
   df_stns <- do.call("rbind", data_stn)
   return(df_stns)
-  print("desarrollado por Hydroprime")
 }
