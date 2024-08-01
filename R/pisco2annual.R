@@ -8,6 +8,8 @@
 #'
 #' @export
 #'
+#' @examples
+#'
 #'library(RPisco)
 #'
 #' pisco.evp <- "D:/0-BD-Pisco/0-Evp"
