@@ -54,6 +54,7 @@ piscomgroup <- function(x){
 
   date <- seq(from = as.Date("1981-01-01"), by = "month", length.out = nrow(Pisco.data))
   Pisco.data <- data.frame(date = date, values = round(Pisco.data, digits = 2))
+  colnames(Pisco.data) <- c("Date", name)
   rownames(Pisco.data) <- NULL
   return(Pisco.data)
 
