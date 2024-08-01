@@ -10,7 +10,7 @@
 #'
 #' @examples
 #'
-#'library(RPisco)
+#' library(RPisco)
 #'
 #' pisco.ppd <- "D:/PISCOd_pp_2.0.nc"
 #' latitude <- -76.11

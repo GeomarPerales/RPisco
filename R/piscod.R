@@ -13,7 +13,7 @@
 #'
 #' @examples
 #'
-#'library(RPisco)
+#' library(RPisco)
 #'
 #' PISCO.file <- file.path("D:", "PISCOd_pp_2.0.nc")
 #' latitude <- -76.11

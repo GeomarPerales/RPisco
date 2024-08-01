@@ -10,7 +10,7 @@
 #'
 #' @examples
 #'
-#'library(RPisco)
+#' library(RPisco)
 #'
 #' pisco.evp <- "D:/0-BD-Pisco/0-Evp"
 #' latitude <- -76.11
