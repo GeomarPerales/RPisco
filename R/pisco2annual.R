@@ -13,12 +13,11 @@
 #' library(RPisco)
 #'
 #' pisco.evp <- "D:/0-BD-Pisco/0-Evp"
-#'latitude <- -76.11
-#'longitude <- -13.11
+#' latitude <- -76.11
+#' longitude <- -13.11
 #' x <-  data.frame(pisco.evp, latitude, longitude)
 #' data.diaria.eo <- piscod.eo(x)
 #' pisco2annual(data.diaria.eo)
-#'
 #'
 #' @name pisco2annual
 

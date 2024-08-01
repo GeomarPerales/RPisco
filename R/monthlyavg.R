@@ -6,7 +6,16 @@
 #' @param param OPTIONAL, default parameter is sum for precipitation and evapotranspiration,
 #' use mean for temperature.
 #'
-#'@export
+#' @export
+#'
+#' library(RPisco)
+#'
+#' pisco.ppd <- "D:/PISCOd_pp_2.0.nc"
+#' latitude <- -76.11
+#' longitude <- -13.11
+#' x <-  data.frame(pisco.ppd, latitude, longitude)
+#' data.diaria.pp <- piscod(x)
+#' monthlyavg(data.diaria.pp)
 #'
 #' @author Geomar Perales Apaico
 #'
