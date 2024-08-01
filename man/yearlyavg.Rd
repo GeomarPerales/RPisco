@@ -16,6 +16,18 @@ use mean for temperature.}
 Function for processing PISCO daily/monthly values into a yearly values, apply to precipitation,
 temperature and evapotranspiration.
 }
+\examples{
+
+library(RPisco)
+
+pisco.ppd <- "D:/PISCOd_pp_2.0.nc"
+latitude <- -76.11
+longitude <- -13.11
+x <-  data.frame(pisco.ppd, latitude, longitude)
+data.diaria.pp <- piscod(x)
+monthlyavg(data.diaria.pp)
+
+}
 \author{
 Geomar Perales Apaico
 }
