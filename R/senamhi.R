@@ -41,7 +41,11 @@ senamhi <- function() {
     stn[[i]] <- gsub(":", "", data_estaciones[[1]][1])
     cat[[i]] <- gsub("cate:", "", data_estaciones[[1]][2])
     lat[[i]] <- gsub("lat:", "", data_estaciones[[1]][3])
+    lat[[i]] <- gsub(" ", "", lat[[i]])
+
     lon[[i]] <- gsub("lon:", "", data_estaciones[[1]][4])
+    lon[[i]] <- gsub(" ", "", lon[[i]])
+
     ico[[i]] <- gsub(" ico:", "", data_estaciones[[1]][5])
 
     cod[[i]] <- ifelse(substr(data_estaciones[[1]][6], 1, 5) == " cod:",
