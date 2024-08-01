@@ -42,9 +42,11 @@ senamhi <- function() {
     cat[[i]] <- gsub("cate:", "", data_estaciones[[1]][2])
     lat[[i]] <- gsub("lat:", "", data_estaciones[[1]][3])
     lat[[i]] <- gsub(" ", "", lat[[i]])
+    lat[[i]] <- as.numeric(lat[[i]])
 
     lon[[i]] <- gsub("lon:", "", data_estaciones[[1]][4])
     lon[[i]] <- gsub(" ", "", lon[[i]])
+    lon[[i]] <- as.numeric(lon[[i]])
 
     ico[[i]] <- gsub(" ico:", "", data_estaciones[[1]][5])
 
@@ -60,7 +62,8 @@ senamhi <- function() {
 
     data_stn[[i]] <- data.frame(estacion = stn[[i]], categoria = cat[[i]],
                                 lat = lat[[i]], lon = lon[[i]], ico = ico[[i]],
-                                cod = cod[[i]], cod_old = cod_old[[i]], estado = estado[[i]])
+                                cod = cod[[i]], cod_old = cod_old[[i]], estado = estado[[i]],
+                                stringsAsFactors = FALSE)
   }
 
   df_stns <- do.call("rbind", data_stn)
