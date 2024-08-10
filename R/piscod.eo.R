@@ -18,8 +18,8 @@
 #'library(RPisco)
 #'
 #' PISCO.folder <- "D:/0-BD-Pisco/0-Evp"
-#' latitude <- -76.11
-#' longitude <- -13.11
+#' latitude <- -74.23
+#' longitude <- -13.18
 #' x <-  data.frame(PISCO.folder, latitude, longitude)
 #' piscod.eo(x)
 #'

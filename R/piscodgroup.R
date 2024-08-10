@@ -17,8 +17,8 @@
 #'
 #' PISCO.file <- file.path("D:", "PISCOd_pp_2.0.nc")
 #' station <- c("Ayacucho", "Coracora")
-#' latitude <- c(-76.11, -73.78)
-#' longitude <- c(-13.11, -15.01)
+#' latitude <- c(-74.23 -73.78)
+#' longitude <- c(-13.18, -15.01)
 #' x <-  data.frame(PISCO.file, station, latitude, longitude)
 #' piscodgroup(x)
 #'
