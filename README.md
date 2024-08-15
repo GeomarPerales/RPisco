@@ -1,4 +1,4 @@
-# RPisco : RPisco package is a package with tools for manipulate PISCO  data.
+# RPisco : RPisco is a package with tools for manipulate PISCO databases.
 
 ## 1. Overview
 
@@ -26,4 +26,6 @@ RPisco contains multiple tools for manipulating PISCO climatic databases from SE
 
 ## 5. References
 
-Aybar. (2017). Uso del producto grillado PISCO de precipitación en estudios, investigaciones sistemas operacionales de monitoreo y pronóstico hidrometeorológico. Lima: SENAMHI.
+Aybar C., Lavado W., Huerta A., Fernandez C., Vega F. and Felipe O. (2018). PISCOp V.2.1: Construction of a High Spatial Temporal Gridded Rainfall Dataset for Peru. In preparation.
+
+RStudio Team (2020). RStudio: Integrated Development for R. RStudio, PBC, Boston, MA URL http://www.rstudio.com/
