@@ -1,6 +1,8 @@
 #' values extraction of PISCO monthly climatic databases from a station
 #'
 #' function for extract values of PISCO monthly climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
+#'
+#'To use RPisco, Download [PISCO climatic databases](https://iridl.ldeo.columbia.edu/SOURCES/.SENAMHI/.HSR/.PISCO/) from [IRI/LDEO Climate Data Library](https://iridl.ldeo.columbia.edu/).
 #' @param x A dataframe containing the PISCO file name (in netCDF format), longitude, and latitude of the station.
 #' @importFrom raster brick
 #' @importFrom raster projection
