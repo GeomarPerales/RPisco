@@ -14,7 +14,7 @@ function for extract values of PISCO monthly climatic databases, PISCO is Peruvi
 }
 \details{
 To use RPisco, Download PISCO climatic databases from IRI/LDEO Climate Data Library.
-visit: \href{https://www.example.com}{Example}
+visit: \href{https://iridl.ldeo.columbia.edu/SOURCES/.SENAMHI/.HSR/.PISCO/}{IRI/LDEO-SENAMHI-PISCO}
 }
 \examples{
 

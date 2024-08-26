@@ -12,6 +12,10 @@ piscod(x)
 \description{
 function for extract values of PISCO daily climatic databases, PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }
+\details{
+To use RPisco, Download PISCO climatic databases from IRI/LDEO Climate Data Library.
+visit: \href{https://iridl.ldeo.columbia.edu/SOURCES/.SENAMHI/.HSR/.PISCO/}{IRI/LDEO-SENAMHI-PISCO}
+}
 \examples{
 
 library(RPisco)
