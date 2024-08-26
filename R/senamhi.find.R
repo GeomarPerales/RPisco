@@ -1,6 +1,7 @@
 #' function for search SENAMHI stations information by coordinates and maximum distance
 #'
 #' function for search SENAMHI stations information by coordinates (latitude and longitude) and maximum distance inside SENAMHI data web.
+#'
 #' @param x numeric; numeric vector of coordinates (latitude and longitude)
 #' @param senamhi stations information of SENAMHI web scraping
 #' @param dist_max numeric, value of maximum distance from stations to point (kms)
