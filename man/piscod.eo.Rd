@@ -13,6 +13,10 @@ piscod.eo(x)
 function for extract values of PISCO evapotranspiration daily climatic databases,
 PISCO is Peruvian Interpolated Data of the Senamhi’s Climatological and Hydrologycal Observations.
 }
+\details{
+To use piscod.eo, Download PISCO climatic databases from IRI/LDEO Climate Data Library.
+visit: \href{https://figshare.com/articles/dataset/Reference_crop_evapotranspiration_PISCOeo_pm_/15215106?backTo=/collections/A_reference_evapotranspiration_gridded_database_based_on_FAO_Penman-Monteith_in_Peru_during_1981-2016/5633182}{PISCOeo_pm files from Figshare}
+}
 \examples{
 
 library(RPisco)
