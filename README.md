@@ -4,7 +4,7 @@
 
 RPisco is a package with tools for manipulating PISCO climatic databases from SENAMHI (Peru). PISCO stands for Peruvian Interpolated Data of SENAMHI’s Climatological and Hydrological Observations. RPisco provides functions for extracting values from single or multiple stations, summing monthly and annual values, and calculating monthly and annual averages.
 
-To use RPisco, Download [PISCO climatic databases](https://iridl.ldeo.columbia.edu/SOURCES/.SENAMHI/.HSR/.PISCO/) from [IRI/LDEO Climate Data Library](https://iridl.ldeo.columbia.edu/) and [Piscoeo_pm files] from [Figshare](https://figshare.com/articles/dataset/Reference_crop_evapotranspiration_PISCOeo_pm_/15215106?backTo=/collections/A_reference_evapotranspiration_gridded_database_based_on_FAO_Penman-Monteith_in_Peru_during_1981-2016/5633182).
+To use RPisco, Download [PISCO climatic databases](https://iridl.ldeo.columbia.edu/SOURCES/.SENAMHI/.HSR/.PISCO/) from [IRI/LDEO Climate Data Library](https://iridl.ldeo.columbia.edu/) and [Piscoeo_pm files](https://figshare.com/articles/dataset/Reference_crop_evapotranspiration_PISCOeo_pm_/15215106?backTo=/collections/A_reference_evapotranspiration_gridded_database_based_on_FAO_Penman-Monteith_in_Peru_during_1981-2016/5633182) from [Figshare](https://figshare.com/).
 
 ## 2. Installation
 
