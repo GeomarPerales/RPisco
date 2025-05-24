@@ -17,15 +17,13 @@ Paso 2: From Github:
 ```
 ## 3. Contents
 
- contains multiple tools for manipulating PISCO climatic databases from SENAMHI (Peru).
+
 
 ## 4. Credits
 
-"RPisco was developed by Geomar Perales. For any issues or suggestions, please contact: perales.geomar@gmail.com."
+"yupana was developed by Geomar Perales. For any issues or suggestions, please contact: perales.geomar@gmail.com."
 
 
 ## 5. References
 
-Aybar C., Lavado W., Huerta A., Fernandez C., Vega F. and Felipe O. (2018). PISCOp V.2.1: Construction of a High Spatial Temporal Gridded Rainfall Dataset for Peru. In preparation.
 
-RStudio Team (2020). RStudio: Integrated Development for R. RStudio, PBC, Boston, MA URL http://www.rstudio.com/
